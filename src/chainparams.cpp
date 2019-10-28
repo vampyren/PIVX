@@ -350,7 +350,7 @@ public:
         nRejectOldSporkKey = 1569538800; //!> Reject old spork key after Thursday, September 26, 2019 11:00:00 PM GMT
         nBlockStakeModifierlV2 = 1214000;
 
-        nBlockTimeProtocolV2 = 1305000;     // !TODO: [ONLY FOR TESTING] CHANGE ME
+        nBlockTimeProtocolV2 = 1308000;     // !TODO: [ONLY FOR TESTING] CHANGE ME
 
         // Public coin spend enforcement
         nPublicZCSpends = 1106100;
