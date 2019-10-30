@@ -493,7 +493,6 @@ void DashboardWidget::updateStakeFilter() {
 
 // pair PIV, zPIV
 const QMap<int, std::pair<qint64, qint64>> DashboardWidget::getAmountBy() {
-    updateStakeFilter();
     const int size = stakesFilter->rowCount();
     QMap<int, std::pair<qint64, qint64>> amountBy;
     // Get all of the stakes
@@ -614,6 +613,7 @@ bool DashboardWidget::refreshChart(){
     isChartMin = width() < 1300;
     isChartInitialized = false;
     showHideEmptyChart(true, true);
+    updateStakeFilter();
     return execute(REQUEST_LOAD_TASK);
 }
 
