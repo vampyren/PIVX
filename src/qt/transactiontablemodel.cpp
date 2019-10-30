@@ -131,7 +131,7 @@ public:
 
         bool hasZcTxes = tablePriv->hasZcTxes;
         for (const auto &tx : walletTxes) {
-            if (TransactionRecord::showTransaction(tx)) {
+            if (TransactionRecord::showTransaction()) {
                 QList<TransactionRecord> records = TransactionRecord::decomposeTransaction(wallet, tx);
 
                 for (const TransactionRecord &record : records) {
@@ -823,14 +823,13 @@ static std::vector<TransactionNotification> vQueueNotifications;
 static void NotifyTransactionChanged(TransactionTableModel* ttm, CWallet* wallet, const uint256& hash, ChangeType status)
 {
     // Find transaction in wallet
-    std::map<uint256, CWalletTx>::iterator mi = wallet->mapWallet.find(hash);
     // Determine whether to show transaction or not (determine this here so that no relocking is needed in GUI thread)
-    bool inWallet = mi != wallet->mapWallet.end();
-    bool showTransaction = (inWallet && TransactionRecord::showTransaction(mi->second));
+    bool showTransaction = TransactionRecord::showTransaction();
 
     TransactionNotification notification(hash, status, showTransaction);
 
-    if (fQueueNotifications) {
+    if (fQueueNotifications)
+    {
         vQueueNotifications.push_back(notification);
         return;
     }
