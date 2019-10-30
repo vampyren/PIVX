@@ -4,7 +4,8 @@
 
 #include "qt/pivx/sendmultirow.h"
 #include "qt/pivx/forms/ui_sendmultirow.h"
-#include <QDoubleValidator>
+#include <QValidator>
+#include <QRegExp>
 
 #include "optionsmodel.h"
 #include "addresstablemodel.h"
@@ -27,9 +28,8 @@ SendMultiRow::SendMultiRow(PWidget *parent) :
 
     ui->lineEditAmount->setPlaceholderText("0.00 PIV ");
     initCssEditLine(ui->lineEditAmount);
-    QDoubleValidator *doubleValidator = new QDoubleValidator(0, 9999999, 8, this);
-    doubleValidator->setNotation(QDoubleValidator::StandardNotation);
-    ui->lineEditAmount->setValidator(doubleValidator);
+    QValidator *validator = new QRegExpValidator(QRegExp("^(?:0|[1-9][0-9]{0,7})\\.[0-9]{0,8}$"), this);
+    ui->lineEditAmount->setValidator(validator);
 
     /* Description */
     ui->labelSubtitleDescription->setText("Label address (optional)");
