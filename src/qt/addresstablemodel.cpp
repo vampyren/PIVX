@@ -567,11 +567,13 @@ QString AddressTableModel::getLastUnusedAddress() const{
     if(!wallet->mapAddressBook.empty()) {
         for (std::map<CTxDestination, AddressBook::CAddressBookData>::iterator it = wallet->mapAddressBook.end(); it != wallet->mapAddressBook.begin(); --it) {
             if(it != wallet->mapAddressBook.end()) {
-                if (it->second.purpose == "receive") {
+                if (it->second.purpose == AddressBook::AddressBookPurpose::RECEIVE) {
                     const CBitcoinAddress &address = it->first;
-                    bool fMine = IsMine(*wallet, address.Get());
-                    if (fMine) {
-                        return QString::fromStdString(address.ToString());
+                    if (address.IsValid()) {
+                        bool fMine = IsMine(*wallet, address.Get());
+                        if (fMine) {
+                            return QString::fromStdString(address.ToString());
+                        }
                     }
                 }
             }

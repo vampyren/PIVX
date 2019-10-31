@@ -255,10 +255,19 @@ void TopBar::lockDropdownMouseLeave(){
 
 void TopBar::onBtnReceiveClicked(){
     if(walletModel) {
+        QString addressStr = walletModel->getAddressTableModel()->getLastUnusedAddress();
+        if (addressStr.isNull()) {
+            // For some reason we don't have any address in our address book, let's create one
+            CBitcoinAddress newAddress;
+            if (!walletModel->getNewAddress(newAddress, "Default").result) {
+                inform(tr("Error generating address"));
+                return;
+            }
+            addressStr = QString::fromStdString(newAddress.ToString());
+        }
         showHideOp(true);
         ReceiveDialog *receiveDialog = new ReceiveDialog(window);
-
-        receiveDialog->updateQr(walletModel->getAddressTableModel()->getLastUnusedAddress());
+        receiveDialog->updateQr(addressStr);
         if (openDialogWithOpaqueBackground(receiveDialog, window)) {
             inform(tr("Address Copied"));
         }
