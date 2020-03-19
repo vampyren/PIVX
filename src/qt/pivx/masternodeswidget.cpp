@@ -345,7 +345,7 @@ void MasterNodesWidget::onInfoMNClicked()
                                  "masternodeaddr=" + address + + "\n" +
                                  "masternodeprivkey=" + index.sibling(index.row(), MNModel::PRIV_KEY).data(Qt::DisplayRole).toString() + "\n";
             GUIUtil::setClipboard(exportedMN);
-            inform(tr("Masternode exported!, check your clipboard"));
+            inform(tr("Remote Masternode Data successfully exported to your clipboard."));
         }
     }
 
