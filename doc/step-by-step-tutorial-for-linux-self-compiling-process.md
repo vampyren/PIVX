@@ -36,6 +36,8 @@ cd /usr/local/bin
 
 **That's it, play around with the latest version of PIVX Core Wallet directly compiled from master branch!**
 
+**NOTE:** If you are testing the wallet through terminal (command line) only, to start the wallet use the `./pivxd --testnet` command instead of the last line (`./pivx-qt --testnet`).
+
 ---------------------------------------------
 ## COMPILING THE WALLET AGAIN WHEN YOU HAVE THE OLD VERSION ALREADY COMPILED
 
@@ -50,15 +52,14 @@ sudo rm -f pivx-cli pivxd pivx-qt pivx-tx test_pivx test_pivx-qt
 Use the next command, but replace the `YOURUSERNAME` with your Ubuntu 18.04 username:
 
 ```
-cd .. && cd .. && cd .. && cd home/YOURUSERNAME
+cd /home/YOURUSERNAME
 git clone https://github.com/pivx-project/pivx.git
 cd pivx
 ./autogen.sh
 ./configure
 make
-sudo make install
-cd .. && cd .. && cd .. && cd .. && cd usr/local/bin
-./pivx-qt
+cd /usr/local/bin
+./pivx-qt --testnet
 ```
 
 #### **Congratulations, you have successfully compiled and started FRESH PIVX Qt Core Wallet!**
