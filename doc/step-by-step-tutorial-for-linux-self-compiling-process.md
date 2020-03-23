@@ -1,6 +1,7 @@
 # SELF-COMPILING PIVX CORE WALLET FOR UBUNTU 18.04
 
-These are detailed step-by-step instructions on how to self-compile PIVX Core Wallet on Ubuntu Linux 18.04 directly from Master branch.
+These are detailed step-by-step instructions for beginners on how to self-compile PIVX Core Wallet on Ubuntu Linux 18.04 directly from Master branch. Even if you are using Windows or any other operating system, you can run Ubuntu 18.04 on Virtual Machine. This tutorial will not cover Virtal Machine setup, but you can follow this detailed tutorial on how to setup Ubuntu 18.04 using VirtualBox:
+[YouTube step by step tutorial](https://www.youtube.com/watch?v=QbmRXJJKsvs)
 
 This tutorial is intended for anyone who is willing to help with testing latest features that PIVX Core Developers are planning to implement on PIVX mainnet. If you find any bugs, please report them directly on PIVX Github:
 
