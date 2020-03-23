@@ -3,7 +3,7 @@
 These are detailed step-by-step instructions for beginners on how to self-compile PIVX Core Wallet on Ubuntu Linux 18.04 directly from Master branch. Even if you are using Windows or any other operating system, you can run Ubuntu 18.04 on Virtual Machine. This tutorial will not cover Virtal Machine setup, but you can follow this detailed tutorial on how to setup Ubuntu 18.04 using VirtualBox:
 [YouTube step by step tutorial](https://www.youtube.com/watch?v=QbmRXJJKsvs)
 
-This tutorial is intended for anyone who is willing to help with testing latest features that PIVX Core Developers are planning to implement on PIVX mainnet. If you find any bugs, please report them directly on PIVX Github:
+This tutorial is intended for anyone who is willing to help with testing of latest features on **testnet** that PIVX Core Developers are planning to implement on PIVX mainnet. If you find any bugs, please report them directly on PIVX Github:
 
 https://github.com/PIVX-Project/PIVX/issues
 
@@ -29,22 +29,12 @@ cd pivx
 ./configure
 make
 cd /usr/local/bin
-./pivx-qt
+./pivx-qt --testnet
 ```
 --------------------------------------------
 **Congratulations, you have successfully compiled and started PIVX Qt Core Wallet!**
 
-After you successfully go through the initial welcome phase and choose the PIVX directory (you can keep default directory), wallet will start loading block files. Quit the wallet now.
-
-We want to use the wallet on **testnet**. Now go to Files within Home folder and in the top right corner you should open Settings and check the `Show Hidden Files` checkbox. This will allow you to see the hidden folders and you will see the `.pivx` folder now. Open it, open pivx.conf file with Text Editor and add exactly:
-`testnet=1`. Save the file.
-
-Let's go back now to Terminal (command line) and type again:
-```
-./pivx-qt
-```
-
-**That's it, you can now play around with the latest version of PIVX Core Wallet directly compiled from master branch!**
+**That's it, play around with the latest version of PIVX Core Wallet directly compiled from master branch!**
 
 ---------------------------------------------
 ## COMPILING THE WALLET AGAIN WHEN YOU HAVE THE OLD VERSION ALREADY COMPILED
