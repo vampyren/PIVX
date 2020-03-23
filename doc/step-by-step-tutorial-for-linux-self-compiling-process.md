@@ -28,13 +28,11 @@ sudo apt-get install libdb4.8-dev libdb4.8++-dev
 sudo apt-get install libminiupnpc-dev
 sudo apt-get install libzmq3-dev
 sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 libqt5svg5-dev libqt5charts5-dev qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler libqrencode-dev
-cd Downloads
 git clone https://github.com/pivx-project/pivx.git
 cd pivx
 ./autogen.sh
 ./configure
 make
-sudo make install
 cd /usr/local/bin
 ./pivx-qt
 ```
@@ -59,7 +57,6 @@ Let's go back now to Terminal (command line) and type again:
 Open the Terminal (command line) and type line by line:
 
 ```
-cd Downloads
 rm -rf pivx
 cd /usr/local/bin
 sudo rm -f pivx-cli pivxd pivx-qt pivx-tx test_pivx test_pivx-qt
@@ -68,7 +65,7 @@ sudo rm -f pivx-cli pivxd pivx-qt pivx-tx test_pivx test_pivx-qt
 Use the next command, but replace the `YOURUSERNAME` with your Ubuntu 18.04 username:
 
 ```
-cd .. && cd .. && cd .. && cd home/YOURUSERNAME/Downloads
+cd .. && cd .. && cd .. && cd home/YOURUSERNAME
 git clone https://github.com/pivx-project/pivx.git
 cd pivx
 ./autogen.sh
