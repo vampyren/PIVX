@@ -13,7 +13,8 @@ https://github.com/PIVX-Project/PIVX/issues
 
 Open the terminal (command line) on Ubuntu 18.04. Type in the commands line by line as following:
 
-```sudo apt-get update
+```
+sudo apt-get update
 sudo apt-get upgrade -y
 sudo apt-get install build-essential libtool bsdmainutils autotools-dev autoconf pkg-config automake python3
 sudo apt-get install libssl-dev libgmp-dev libevent-dev libboost-all-dev
