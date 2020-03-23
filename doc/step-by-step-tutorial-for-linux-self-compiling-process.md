@@ -47,13 +47,7 @@ Open the Terminal (command line) and type line by line:
 rm -rf pivx
 cd /usr/local/bin
 sudo rm -f pivx-cli pivxd pivx-qt pivx-tx test_pivx test_pivx-qt
-```
-
-Use the next command, but replace the `YOURUSERNAME` with your Ubuntu 18.04 username:
-
-```
-cd /home/YOURUSERNAME
-git clone https://github.com/pivx-project/pivx.git
+cd ~ && git clone https://github.com/pivx-project/pivx.git
 cd pivx
 ./autogen.sh
 ./configure
