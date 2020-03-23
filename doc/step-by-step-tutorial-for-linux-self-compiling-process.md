@@ -29,8 +29,7 @@ cd pivx
 ./configure
 make
 sudo make install
-cd /usr/local/bin
-./pivx-qt --testnet
+./pivx-qt --testnet &
 ```
 --------------------------------------------
 **Congratulations, you have successfully compiled and started PIVX Qt Core Wallet!**
@@ -54,8 +53,7 @@ cd pivx
 ./configure
 make
 sudo make install
-cd /usr/local/bin
-./pivx-qt --testnet
+./pivx-qt --testnet &
 ```
 
 #### **Congratulations, you have successfully compiled and started FRESH PIVX Qt Core Wallet!**
