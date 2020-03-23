@@ -33,7 +33,7 @@ cd pivx
 ./configure
 make
 sudo make install
-cd .. && cd .. && cd .. && cd .. && cd usr/local/bin
+cd /usr/local/bin
 ./pivx-qt
 ```
 --------------------------------------------
@@ -59,7 +59,7 @@ Open the Terminal (command line) and type line by line:
 ```
 cd Downloads
 rm -rf pivx
-cd .. && cd .. && cd .. && cd usr/local/bin
+cd /usr/local/bin
 sudo rm -f pivx-cli pivxd pivx-qt pivx-tx test_pivx test_pivx-qt
 ```
 
