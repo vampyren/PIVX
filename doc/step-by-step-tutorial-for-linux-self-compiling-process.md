@@ -16,17 +16,12 @@ https://github.com/PIVX-Project/PIVX/issues
 Open the terminal (command line) on Ubuntu 18.04. Type in the commands line by line as following:
 
 ```
-sudo apt-get update
-sudo apt-get upgrade -y
-sudo apt-get install build-essential libtool bsdmainutils autotools-dev autoconf pkg-config automake python3
-sudo apt-get install libssl-dev libgmp-dev libevent-dev libboost-all-dev
-sudo apt-get install software-properties-common
+sudo apt-get update && sudo apt-get upgrade -y
+sudo apt-get install build-essential libtool bsdmainutils autotools-dev autoconf pkg-config automake python3 -y
+sudo apt-get install libssl-dev libgmp-dev libevent-dev libboost-all-dev software-properties-common -y
 sudo add-apt-repository ppa:pivx/pivx
-sudo apt-get update
-sudo apt-get upgrade -y
-sudo apt-get install libdb4.8-dev libdb4.8++-dev
-sudo apt-get install libminiupnpc-dev
-sudo apt-get install libzmq3-dev
+sudo apt-get update && sudo apt-get upgrade -y
+sudo apt-get install libdb4.8-dev libdb4.8++-dev libminiupnpc-dev libzmq3-dev -y
 sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 libqt5svg5-dev libqt5charts5-dev qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler libqrencode-dev
 git clone https://github.com/pivx-project/pivx.git
 cd pivx
