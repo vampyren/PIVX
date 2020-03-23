@@ -7,6 +7,8 @@ This tutorial is intended for anyone who is willing to help with testing latest 
 
 https://github.com/PIVX-Project/PIVX/issues
 
+**NOTE:** I wouldn't recommend doing this on the same machine where you are running your main PIVX wallet, not to break something and lose/damage your wallet.dat file. If you are doing it, please make sure that you have backup of your wallet.dat file safely stored somewhere before starting this. It's safer to run it on a different machine or Virtual Machine.
+
 ---------------------------------------------------------
 
 ## Let's start...
