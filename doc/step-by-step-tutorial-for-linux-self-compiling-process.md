@@ -28,6 +28,7 @@ cd pivx
 ./autogen.sh
 ./configure
 make
+sudo make install
 cd /usr/local/bin
 ./pivx-qt --testnet
 ```
@@ -52,6 +53,7 @@ cd pivx
 ./autogen.sh
 ./configure
 make
+sudo make install
 cd /usr/local/bin
 ./pivx-qt --testnet
 ```
