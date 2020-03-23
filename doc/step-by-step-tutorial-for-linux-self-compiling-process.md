@@ -50,7 +50,9 @@ Let's go back now to Terminal (command line) and type again:
 **That's it, you can now play around with the latest version of PIVX Core Wallet directly compiled from master branch!**
 
 ---------------------------------------------
-### COMPILING THE WALLET AGAIN WHEN YOU HAVE THE OLD VERSION ALREADY COMPILED
+## COMPILING THE WALLET AGAIN WHEN YOU HAVE THE OLD VERSION ALREADY COMPILED
+
+Open the Terminal (command line) and type line by line:
 
 ```
 cd Downloads
