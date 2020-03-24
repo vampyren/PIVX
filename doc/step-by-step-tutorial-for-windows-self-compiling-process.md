@@ -51,7 +51,7 @@ Also, even if you get the **conftest.ext - System Error**, don't worry, just **c
 7. Run the following commands line by line:
 ```
 ./autogen.sh && CONFIG_SITE=$PWD/depends/x86_64-w64-mingw32/share/config.site ./configure --prefix=/
-make -j<threads_num>  **# replace <threads_num> with number of threads, like 1, 2, 4...**
+make -j<threads_num>  # replace <threads_num> with number of threads, like 1, 2, 4...
 cmd.exe /C start "C:\Users\YOUR_WINDOWS_USERNAME\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc\LocalState\rootfs\home\YOUR_WSL_USERNAME\PIVX\src\qt\pivx-qt.exe" --testnet
 ```
 **NOTE:** From last command, replace `YOUR_WINDOWS_USERNAME` with your Windows User name, and `YOUR_WSL_USERNAME` with username you used in Step 3 earlier.
@@ -81,7 +81,7 @@ Go inside PIVX directory:
 ```
 cd PIVX
 git pull origin master
-make -j<threads_num>  **# replace <threads_num> with number of threads, like 1, 2, 4...**
+make -j<threads_num>  # replace <threads_num> with number of threads, like 1, 2, 4...
 cmd.exe /C start "C:\Users\YOUR_WINDOWS_USERNAME\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc\LocalState\rootfs\home\YOUR_WSL_USERNAME\PIVX\src\qt\pivx-qt.exe" --testnet
 ```
 **NOTE:** From last command, replace `YOUR_WINDOWS_USERNAME` with your Windows User name, and `YOUR_WSL_USERNAME` with username you used in Step 3 earlier.
