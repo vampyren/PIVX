@@ -54,3 +54,5 @@ make -j<threads_num>  # replace <threads_num> with number of threads, like 1, 2,
 The <threads_num> needs to be less than the amount of processors, otherwise it will slow down the process.
 
 #### **Congratulations, you have successfully compiled and started FRESH PIVX Qt Core Wallet!**
+
+This tutorial was made and summarized following the official PIVX build guide for Unix. If you are interested in details and broader understanding of what you're doing in each step, [visit the official PIVX full build guide by clicking HERE](https://github.com/PIVX-Project/PIVX/blob/master/doc/build-unix.md).
