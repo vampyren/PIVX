@@ -28,7 +28,7 @@ sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 libqt5svg5-dev libqt5ch
 git clone https://github.com/pivx-project/pivx.git PIVX
 cd PIVX
 ./autogen.sh && ./configure
-make -j<threads_num>  # replace `<threads_num>` with number of threads, like 1, 2, 4...
+make -j<threads_num>  # replace <threads_num> with number of threads, like 1, 2, 4...
 ./src/qt/pivx-qt --testnet &
 ```
 --------------------------------------------
@@ -45,7 +45,7 @@ Inside PIVX directory:
 ```
 cd PIVX
 git pull origin master
-make -j<threads_num>  # replace `<threads_num>` with number of threads, like 1, 2, 4... 
+make -j<threads_num>  # replace <threads_num> with number of threads, like 1, 2, 4... 
 ./src/qt/pivx-qt --testnet &
 ```
 
