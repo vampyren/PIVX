@@ -26,6 +26,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 3. Setup your username and password
 4. Run these commands line by line:
 ```
+sudo dpkg --configure -a
 sudo apt update && sudo apt upgrade -y
 sudo apt install build-essential libtool autotools-dev automake pkg-config bsdmainutils curl git nsis -y 
 git clone https://github.com/pivx-project/pivx.git PIVX
