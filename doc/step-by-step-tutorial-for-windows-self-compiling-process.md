@@ -52,8 +52,8 @@ Also, even if you get the **conftest.ext - System Error**, don't worry, just **c
 ```
 ./autogen.sh && CONFIG_SITE=$PWD/depends/x86_64-w64-mingw32/share/config.site ./configure --prefix=/
 make
-sudo make install DESTDIR=/mnt/c/workspace/PIVX
-# myExperiment - ./mnt/c/workspace/PIVX/bin/pivx-qt.exe --testnet
+# not needed??  # sudo make install DESTDIR=/mnt/c/workspace/PIVX
+cmd.exe /C start "C:\Users\YOUR_WINDOWS_USERNAME\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc\LocalState\rootfs\home\YOUR_WSL_USERNAME\PIVX\src\qt\pivx-qt.exe" --testnet
 ```
 
 **NOTE:** When running the command `make`, your AntiVirus might show a warning, you can ignore this or in Advanced Options even exclude the file from detection.
@@ -63,8 +63,6 @@ sudo make install DESTDIR=/mnt/c/workspace/PIVX
 
 **That's it, play around with the latest version of PIVX Core Wallet directly compiled from master branch!**
 
-**NOTE:** If you are testing the wallet through terminal (command line) only, to start the wallet use the `./src/qt/pivxd --testnet` command instead of the last line (`./src/qt/pivx-qt --testnet &`).
-
 ---------------------------------------------
 ## COMPILING WHEN YOU ALREADY HAVE THE WALLET
 
@@ -73,7 +71,7 @@ Go inside PIVX directory:
 cd PIVX
 git pull origin master
 make -j<threads_num>  # replace <threads_num> with number of threads, like 1, 2, 4... 
-./src/qt/pivx-qt --testnet &
+cmd.exe /C start "C:\Users\YOUR_WINDOWS_USERNAME\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc\LocalState\rootfs\home\YOUR_WSL_USERNAME\PIVX\src\qt\pivx-qt.exe" --testnet
 ```
 
 **Extra information:**
