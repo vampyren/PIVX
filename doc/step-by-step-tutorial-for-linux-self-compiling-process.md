@@ -36,7 +36,7 @@ make -j<threads_num>  # replace <threads_num> with number of threads, like 1, 2,
 
 **That's it, play around with the latest version of PIVX Core Wallet directly compiled from master branch!**
 
-**NOTE:** If you are testing the wallet through terminal (command line) only, to start the wallet use the `./pivxd --testnet` command instead of the last line (`./pivx-qt --testnet &`).
+**NOTE:** If you are testing the wallet through terminal (command line) only, to start the wallet use the `./src/qt/pivxd --testnet` command instead of the last line (`./src/qt/pivx-qt --testnet &`).
 
 ---------------------------------------------
 ## COMPILING WHEN YOU ALREADY HAVE THE WALLET
