@@ -41,7 +41,7 @@ make -j<threads_num>  # replace <threads_num> with number of threads, like 1, 2,
 ---------------------------------------------
 ## COMPILING WHEN YOU ALREADY HAVE THE WALLET
 
-Inside PIVX directory:
+Go inside PIVX directory:
 ```
 cd PIVX
 git pull origin master
