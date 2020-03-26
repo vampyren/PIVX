@@ -51,19 +51,19 @@ Also, even if you get the **conftest.ext - System Error**, don't worry, just **c
 7. Run the following commands line by line:
 ```
 ./autogen.sh && CONFIG_SITE=$PWD/depends/x86_64-w64-mingw32/share/config.site ./configure --prefix=/
-make -j<threads_num>  # replace <threads_num> with number of threads, like 1, 2, 4...
+make -j2
 cmd.exe /C start "C:\Users\YOUR_WINDOWS_USERNAME\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc\LocalState\rootfs\home\YOUR_WSL_USERNAME\PIVX\src\qt\pivx-qt.exe" --testnet
 ```
 **NOTE:** From last command, replace `YOUR_WINDOWS_USERNAME` with your Windows User name, and `YOUR_WSL_USERNAME` with username you used in Step 3 earlier.
 
 **Extra information:**
 
-The <threads_num> needs to be less than the amount of processors, otherwise it will slow down the process.
+You can replace the number 2 in `make -j2` line with the number of threads you want to use while compiling, but have in mind that it needs to be less than the amount of processors, otherwise it will slow down the process.
 
-**NOTE:** When running the command `make`, your AntiVirus might show a warning, you can ignore this or in Advanced Options even exclude the file from detection.
+**NOTE:** When running the command `make -j2`, your AntiVirus might show a warning, you can ignore this or in Advanced Options even exclude the file from detection.
 
 **Optional step:**
-After you successfully compile the wallet, you can copy-paste the compiled executables to a "fast reachable" folder on your Local Disc, by using the following command after `make -j<threads_num>`:
+After you successfully compile the wallet, you can copy-paste the compiled executables to a "fast reachable" folder on your Local Disc, by using the following command after `make -j2`:
 
 ```
 sudo make install DESTDIR=/mnt/c/workspace/PIVX
@@ -81,17 +81,17 @@ Go inside PIVX directory:
 ```
 cd PIVX
 git pull origin master
-make -j<threads_num>  # replace <threads_num> with number of threads, like 1, 2, 4...
+make -j2
 cmd.exe /C start "C:\Users\YOUR_WINDOWS_USERNAME\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc\LocalState\rootfs\home\YOUR_WSL_USERNAME\PIVX\src\qt\pivx-qt.exe" --testnet
 ```
 **NOTE:** From last command, replace `YOUR_WINDOWS_USERNAME` with your Windows User name, and `YOUR_WSL_USERNAME` with username you used in Step 3 earlier.
 
 **Extra information:**
 
-The <threads_num> needs to be less than the amount of processors, otherwise it will slow down the process.
+You can replace the number 2 in `make -j2` line with the number of threads you want to use while compiling, but have in mind that it needs to be less than the amount of processors, otherwise it will slow down the process.
 
 **Optional step:**
-After you successfully compile the wallet, you can copy-paste the compiled executables to a "fast reachable" folder on your Local Disc, by using the following command after `make -j<threads_num>`:
+After you successfully compile the wallet, you can copy-paste the compiled executables to a "fast reachable" folder on your Local Disc, by using the following command after `make -j2`:
 
 ```
 sudo make install DESTDIR=/mnt/c/workspace/PIVX
