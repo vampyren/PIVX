@@ -28,10 +28,14 @@ sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 libqt5svg5-dev libqt5ch
 git clone https://github.com/pivx-project/pivx.git PIVX
 cd PIVX
 ./autogen.sh && ./configure
-make -j<threads_num>  # replace <threads_num> with number of threads, like 1, 2, 4...
+make -j1
 ./src/qt/pivx-qt --testnet &
 ```
 --------------------------------------------
+**Extra information:**
+
+You can replace the number 1 in `make -j1` line with the number of threads you want to use while compiling, but have in mind that it needs to be less than the amount of processors, otherwise it will slow down the process.
+
 **Congratulations, you have successfully compiled and started PIVX Qt Core Wallet!**
 
 **That's it, play around with the latest version of PIVX Core Wallet directly compiled from master branch!**
@@ -45,14 +49,14 @@ Go inside PIVX directory:
 ```
 cd PIVX
 git pull origin master
-make -j<threads_num>  # replace <threads_num> with number of threads, like 1, 2, 4... 
+make -j1
 ./src/qt/pivx-qt --testnet &
 ```
 
 **Extra information:**
 
-The <threads_num> needs to be less than the amount of processors, otherwise it will slow down the process.
+You can replace the number 1 in `make -j1` line with the number of threads you want to use while compiling, but have in mind that it needs to be less than the amount of processors, otherwise it will slow down the process.
 
 #### **Congratulations, you have successfully compiled and started FRESH PIVX Qt Core Wallet!**
 
-This tutorial was made and summarized following the official PIVX build guide for Unix. If you are interested in details and broader understanding of what you're doing in each step, [visit the official PIVX full build guide for Linux by clicking HERE](https://github.com/PIVX-Project/PIVX/blob/master/doc/build-unix.md).
+This tutorial was made and summarized following the official PIVX build guide for Unix. If you are interested in details and broader understanding of what you're doing in each step, [visit the official PIVX full build guide for Unix by clicking HERE](https://github.com/PIVX-Project/PIVX/blob/master/doc/build-unix.md).
