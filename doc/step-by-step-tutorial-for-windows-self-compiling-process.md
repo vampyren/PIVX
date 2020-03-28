@@ -53,6 +53,8 @@ cd ~/PIVX/
 **NOTE:** At step `make HOST=x86_64-w64-mingw32` above, when you see list like - timer, - wave etc **press the ENTER to continue**...it looks like it gets paused and pressing enter will resume the building process.
 Also, even if you get the **conftest.ext - System Error**, don't worry, just **click OK** and it will continue with the process.
 
+**IMPORTANT NOTE:** Make sure before running the next steps that your Antivirus software is not blocking or even worse deleting the pivx-qt.exe when running `make -j2`. It's common that bitcoin miner is detected as a virus (false alarm). The best approach is to exclude from detection PIVX folder path in the last line below.
+
 7. Run the following commands line by line:
 ```
 ./autogen.sh && CONFIG_SITE=$PWD/depends/x86_64-w64-mingw32/share/config.site ./configure --prefix=/
