@@ -107,3 +107,6 @@ sudo make install DESTDIR=/mnt/c/workspace/PIVX
 #### **Congratulations, you have successfully compiled and started FRESH PIVX Qt Core Wallet!**
 
 This tutorial was made and summarized following the official PIVX build guide for Windows. If you are interested in details and broader understanding of what you're doing in each step, [visit the official PIVX full build guide for Windows by clicking HERE](https://github.com/PIVX-Project/PIVX/blob/master/doc/build-windows.md).
+
+#### **For getting test PIV, called tPIV go to this this:**
+https://faucet.pivx.link/
